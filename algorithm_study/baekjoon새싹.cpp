@@ -1,23 +1,14 @@
 #include <iostream>
-#include <vector>
-#include <algorithm>
+#include <string>
 using namespace std;
 
 int main() {
 	ios_base::sync_with_stdio(false);
 	cin.tie(nullptr); cout.tie(nullptr);
-	vector<int> v, answer;
-	for (int i = 0; i < 30; i++) {
-		answer.push_back(i + 1);
-	}
-	for (int i = 0; i < 28; i++) {
-		int input;
+	int input, answer = 0;
+	for (int i = 0; i < 5; i++) {
 		cin >> input;
-		for (int j = 0; j < answer.size(); j++) {
-			if (answer[j] == input) answer.erase(answer.begin() + j);
-		}
+		answer += input * input;
 	}
-	for (int elem : answer) {
-		cout << elem << "\n";
-	}
+	cout << (answer % 10);
 }
