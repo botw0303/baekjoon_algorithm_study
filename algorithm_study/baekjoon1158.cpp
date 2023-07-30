@@ -4,36 +4,28 @@
 using namespace std;
 //yet
 int main() {
-	int n, k, cnt = 0;
+	int n, k, cnt = 1;
 	queue<int> q;
+	vector<int> answer;
 	cin >> n >> k;
 	for (int i = 0; i < n; i++) {
 		q.push(i + 1);
 	}
 	while (q.size() > 0) {
-		for (int i = 0; i < 3; i++) {
-
+		if (cnt >= k) {
+			answer.push_back(q.front());
+			q.pop();
+			cnt = 1;
+			continue;
 		}
+		q.push(q.front());
+		q.pop();
+		cnt++;
+		
 	}
-	
-	/*int n, k, front = 0, cnt = 0;
-	vector<int> v;
-	cin >> n >> k;
-	for (int i = 0; i < n; i++) {
-		v.push_back(i + 1);
-	}
-	int size = v.size();
 	cout << "<";
-	while (n > 1) {
-		front = (front + 1) % v.size();
-		if (cnt == 3) {
-			cout << v[((front + 1) % v.size())] << ", ";
-
-		}
-		else {
-			front++;
-			cnt++;
-		}
+	for (int i = 0; i < answer.size() - 1; i++) {
+		cout << answer[i] << ", ";
 	}
-	cout << v.front() << ">";*/
+	cout << answer[answer.size() - 1] << ">";
 }
