@@ -5,7 +5,7 @@
 using namespace std;
 
 int n, m, k, x;
-vector<vector<int>> arrrr;
+vector<vector<int>> maps;
 vector<int> visited;
 vector<int> answer;
 
@@ -14,14 +14,14 @@ void BFS() {
 	q.push(x);
 	visited[x] = 0;
 	while (!q.empty()) {
-		int cur = q.front();
+		int now = q.front();
 		q.pop();
-		for (auto item : arrrr[cur])
-		{
-			if (visited[item] == -1) {
-				visited[item] = visited[cur] + 1;
-				if (visited[item] == k) answer.push_back(item);
-				q.push(item);
+		for (int elem : maps[now]) {
+			if (visited[elem] == -1) {
+				visited[elem] = visited[now] + 1;
+				if (visited[elem] == k)
+					answer.push_back(elem);
+				q.push(elem);
 			}
 		}
 	}
@@ -29,12 +29,12 @@ void BFS() {
 
 int main() {
 	cin >> n >> m >> k >> x;
-	arrrr.resize(n+1, vector<int>());
-	visited.resize(n+1, -1);
-	for (int i = 0; i < m; i++) {
+	maps.resize(n + 1, vector<int>());
+	visited.resize(n + 1, -1);
+	for (int i = 0; i < m; ++i) {
 		int a, b;
 		cin >> a >> b;
-		arrrr[a].push_back(b);
+		maps[a].push_back(b);
 	}
 	BFS();
 	sort(answer.begin(), answer.end());
@@ -43,7 +43,7 @@ int main() {
 	}
 	else {
 		for (int elem : answer) {
-			cout << elem << endl;
+			cout << elem << "\n";
 		}
 	}
 }
