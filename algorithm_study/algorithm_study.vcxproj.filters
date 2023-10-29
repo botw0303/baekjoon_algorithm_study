@@ -138,13 +138,28 @@
     <ClCompile Include="baekjoon11654.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="backjoon1920.cpp">
+    <ClCompile Include="baekjoon1920.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="baekjoon5639.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="baekjoon11866.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="NYPC Round1_1.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="programmers120844.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="programmers120826.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="programmers42578.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="programmers42579.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
