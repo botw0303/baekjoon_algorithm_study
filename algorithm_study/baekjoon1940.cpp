@@ -3,7 +3,7 @@
 using namespace std;
 
 int main() {
-	int ingredientNum, needNumToArmor, result = 0, offset = 0;
+	int ingredientNum, needNumToArmor, result = 0;
 	vector<int> ingredients;
 
 	cin >> ingredientNum >> needNumToArmor;
@@ -13,7 +13,13 @@ int main() {
 		ingredients.push_back(input);
 	}
 
-	//구별해주는 과정 해줘야함
+	for (int i = 0; i < ingredients.size(); ++i) {
+		for (int j = i + 1; j < ingredients.size(); ++j) {
+			if (ingredients[i] + ingredients[j] == needNumToArmor) {
+				result++;
+			}
+		}
+	}
 
 	cout << result;
 }
