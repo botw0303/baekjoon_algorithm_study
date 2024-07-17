@@ -189,13 +189,7 @@
     <ClCompile Include="beakjoon16395.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="baekjoon15489.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="ddpppractice.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="baekjoon2294.cpp">
+    <ClCompile Include="baekjoon1929.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
